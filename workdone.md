@@ -11,12 +11,17 @@ This document tracks the cleaned and current project direction.
 - Created and aligned the main project docs around CarbonLens
 - Cleaned conflicting documentation that had pushed OCR-heavy and oversized MVP scope
 - Updated README, idea, CRD, PRD, architecture, task plan, and pitch notes for one consistent story
+- Generated `schema.sql` and established Supabase Postgres database architecture natively
+- Implemented Database Postgres Triggers for automated Issue generation
+- Provisioned Next.js codebase in the `/carbon-lens` directory
+- Integrated `@supabase/ssr` database utilities and environment variables
+- Created highly robust Calculation Engine Service backing Phase 2 requirements
 
 ## Current Status
 
-- Documentation is aligned
-- Product direction is stable
-- Ready for implementation planning or scaffolding
+- Core Database is live and secured with Row Level Security (RLS)
+- Backend calculation logic (Phase 2 core) is actively established
+- Ready to seed specific factor data and bridge APIs to the React frontend
 
 ## Removed or Simplified
 
@@ -29,12 +34,12 @@ This document tracks the cleaned and current project direction.
 
 1. Finalize the canonical tech stack in docs
 2. Create implementation scaffolding
-3. Seed demo data
+3. Seed demo data (Emission Factors)
 4. Build core flows in this order:
-   - auth
-   - data entry/upload
-   - calculation engine
+   - Next.js Form Actions bridging Calculation Service
+   - auth (Supabase session linkage)
+   - data entry UI
    - dashboard
-   - governance
+   - governance UI
    - report summary
    - AI-smart summary layer

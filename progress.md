@@ -26,16 +26,21 @@ Documentation planning pack created. Project concept, scope, design direction, s
 - API contract draft
 - Demo script draft
 - Pitch notes draft
+- Initialized Next.js `carbon-lens` repository scaffolding
+- Setup Supabase Auth / PostgreSQL database
+- Designed and executed `schema.sql` establishing 7 core relational tables
+- Implemented Row-Level Security (RLS) and Webhook Triggers for automated governance
+- Built `src/lib/services/emissions.ts` core Calculation Engine for Scope 1, 2, and CSV batch processing.
 
 ## In Progress
 
-- No implementation in progress
-- Ready for repo setup and code scaffolding in next phase
+- Next.js Server Actions and API Routing integration
+- Seeding the `emission_factors` database table
+- Connecting calculation logic to Next.js Client components
 
 ## Blockers
 
-- No active blockers for documentation phase
-- Implementation phase will need actual repo and code structure
+- No active blockers. The database is successfully connected to the codebase.
 
 ## Risks
 
@@ -46,11 +51,9 @@ Documentation planning pack created. Project concept, scope, design direction, s
 
 ## Next Immediate Tasks
 
-- Initialize project repository
-- Create frontend and backend scaffolding
-- Define Prisma schema
-- Prepare seed data
-- Build calculations first
+- Seed the `emission_factors` and `organizations` tables in Supabase
+- Build Server Actions bridging the frontend forms to the `emissions.ts` calculation service
+- Develop the Dashboard UI components mapped to our backend APIs
 
 ## Demo Readiness Checklist
 
