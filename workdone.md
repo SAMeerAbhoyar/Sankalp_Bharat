@@ -178,16 +178,21 @@ This document tracks completed work per team member with timestamps.
 
 ## Harsh — Supplier UI + Settings
 
-### Status: Not started
+### Phase 1 ✅ `2026-04-17`
 
-**Assigned tasks (Phase 1):**
-- Settings screen with react-hook-form + Zod validation
-- Payloads for Jiya's Master Data APIs
+- Frontend app scaffolding with React Router, Tailwind, Axios, and shared session/http utilities
+- Internal settings experience for organization and facility management
+- Settings screen with `react-hook-form` + Zod validation for the settings workflow
+- Payloads mapped for Jiya's Master Data APIs
 
-**Assigned tasks (Phase 2):**
-- Supplier submission portal (public-facing, no sidebar)
+### Phase 2 ✅ `2026-04-17`
 
-**Assigned tasks (Phase 3):**
+- Public supplier submission portal route and separate external layout
+- Repeatable supplier metric entry with file attachment support
+- Supplier submission API integration using unauthenticated `FormData`
+
+### Phase 3: Pending
+
 - Global Axios response interceptor → Toaster alerts on ≥400 errors
 
 ---

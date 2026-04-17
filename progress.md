@@ -2,7 +2,7 @@
 
 ## Current Status
 
-**Implementation in progress.** Frontend Phase 1 & 2 complete. Backend Phase 1 & 2 complete. Jiya Phase 1 & 2 Backend APIs constructed, seeded, and tested. Both servers running and tested end-to-end.
+**Implementation in progress.** Frontend Phase 1 & 2 complete. Backend Phase 1 & 2 complete. Jiya Phase 1 & 2 Backend APIs constructed, seeded, and tested. Harsh Phase 1 & 2 supplier UI implemented. Both servers running and tested end-to-end.
 
 ---
 
@@ -48,6 +48,14 @@
 - **Phase 2 Supplier Portal:** JWT Invites, external Multer file submission API, Visual Test UI
 - Deployed secure JWT-based supplier invite endpoints
 - External `multer` form-data endpoint for Scope 3 metrics and evidence documents
+
+### Harsh — Frontend Phase 1 & 2
+- Frontend app scaffolding with React Router, Tailwind, Axios, and shared session/http utilities
+- Internal settings experience for organization and facility management
+- `react-hook-form` + Zod validation for the settings workflow
+- Public supplier submission portal route and separate external layout
+- Repeatable supplier metric entry with file attachment support
+- Supplier submission API integration using unauthenticated `FormData`
 
 ### Atharva — Frontend Phase 1 (completed `2026-04-17 ~21:30 IST`)
 - Vite + React + TypeScript scaffolding
@@ -112,15 +120,15 @@
 - Sahiti — EmissionEngine real calculation logic (`processBatch`, `calculateSingle`)
 - Jiya — Phase 3 Validation Engine & Analytics
 - Sparsh — Dashboard Recharts integration (metric cards wired to `/api/dashboard/summary`)
-- Harsh — Governance review data grid, supplier submission UI, global Axios toast interceptor
+- Harsh — Global Axios toast interceptor
 
 ---
 
 ## Blockers
 
 - Dashboard metric cards show `—` until Sahiti seeds real emission records with calculated values
-- Supplier Submission form (Harsh) requires Jiya's hash-token endpoint
 - AI insights layer requires Jiya's `/api/insights/generate` endpoint
+- End-to-end supplier submission depends on the backend `/api/supplier/submit` endpoint honoring the agreed phase 2 payload contract
 
 ---
 
@@ -141,6 +149,9 @@
 - Seed the `emission_factors` and `organizations` tables in Supabase
 - Build Server Actions bridging the frontend forms to the `emissions.ts` calculation service
 - Develop the Dashboard UI components mapped to our backend APIs
+- Connect the supplier portal to the live backend endpoint and validate file handling
+- Reconcile older API documentation with the newer supplier submission contract
+- Add backend-backed test coverage for supplier submission and issue workflows
 
 ---
 
@@ -163,10 +174,10 @@
 - [x] Implementation started
 - [x] Seeded demo data created (1000+ records)
 - [x] UI API tester built
+- [x] Supplier submission portal (Harsh + Jiya)
 - [ ] Real emission calculations (Sahiti)
 - [ ] Dashboard charts with live data (Sparsh + Jiya)
 - [ ] Governance issue board (Sparsh)
-- [ ] Supplier submission portal (Harsh + Jiya)
 - [ ] Final UI demo built
 - [ ] Report output built
 - [ ] AI smart summary panel
